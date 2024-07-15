@@ -7,22 +7,16 @@ use yii\db\Migration;
  */
 class m240715_164511_create_authors_table extends Migration
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
-    {
-        $this->createTable('{{%authors}}', [
-            'id' => $this->primaryKey(),
-            'name' => $this->string(255)->notNull(),
-        ]);
-    }
+ // create_authors_table.php
+public function safeUp()
+{
+    $this->createTable('{{%authors}}', [
+        'id' => $this->primaryKey(),
+        'name' => $this->string(255)->notNull(),
+    ]);
+}
 
-    /**
-     * {@inheritdoc}
-     */
-    public function safeDown()
-    {
-        $this->dropTable('{{%authors}}');
-    }
+// create_books_table.php
+
+
 }
