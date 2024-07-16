@@ -37,6 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],
+            [
+                'attribute' => 'booksCount',
+                'label' => 'Books Count',
+                'value' => function($model) {
+                    return $model->getBooks()->count();
+                }
+            ],
         ],
     ]); ?>
 
