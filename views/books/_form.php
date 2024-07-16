@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use app\models\Author;
+use app\models\Authors;
 use kartik\select2\Select2;
 /** @var yii\web\View $this */
 /** @var app\models\Book $model */
@@ -16,12 +16,12 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'author_id')->textInput    () ?>
+    <?//= $form->field($model, 'author_id')->textInput    () ?>
 
     <div class="row">
 	<div class="col-md-4">
                     <?= $form->field($model,
-                        'paymentterms_id')
+                        'author_id')
                         ->widget(Select2::class, [
                             'data' => ArrayHelper::map(Author::find()->all(), 'id', 'name'),
                             'options' => ['placeholder' => 'Выберите автора'],

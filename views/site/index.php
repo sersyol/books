@@ -11,8 +11,8 @@ $this->title = 'My Yii Application';
         <h1 class="display-4">Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
-        <p><?= Html::a('View Authors', ['author/index'], ['class' => 'btn btn-lg btn-success']) ?></p>
-        <p><?= Html::a('View Books', ['book/index'], ['class' => 'btn btn-lg btn-primary']) ?></p>
+        <p><?= Html::a('View Authors', ['authors/index'], ['class' => 'btn btn-lg btn-success']) ?></p>
+        <p><?= Html::a('View Books', ['books/index'], ['class' => 'btn btn-lg btn-primary']) ?></p>
         <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 

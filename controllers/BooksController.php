@@ -2,16 +2,17 @@
 
 namespace app\controllers;
 
-use app\models\Author;
-use app\models\AuthorSearch;
+use app\models\Books;
+use app\models\BookSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Authors;
 
 /**
- * AuthorController implements the CRUD actions for Author model.
+ * BookController implements the CRUD actions for Book model.
  */
-class AuthorController extends Controller
+class BooksController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +33,13 @@ class AuthorController extends Controller
     }
 
     /**
-     * Lists all Author models.
+     * Lists all Book models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new AuthorSearch();
+        $searchModel = new BookSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +49,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * Displays a single Author model.
+     * Displays a single Book model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +62,13 @@ class AuthorController extends Controller
     }
 
     /**
-     * Creates a new Author model.
+     * Creates a new Books model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Author();
+        $model = new Books();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +84,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * Updates an existing Author model.
+     * Updates an existing Book model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -103,7 +104,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * Deletes an existing Author model.
+     * Deletes an existing Book model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -117,15 +118,15 @@ class AuthorController extends Controller
     }
 
     /**
-     * Finds the Author model based on its primary key value.
+     * Finds the Book model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Author the loaded model
+     * @return Books the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Author::findOne(['id' => $id])) !== null) {
+        if (($model = Books::findOne(['id' => $id])) !== null) {
             return $model;
         }
 
