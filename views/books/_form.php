@@ -23,7 +23,7 @@ use kartik\select2\Select2;
                     <?= $form->field($model,
                         'author_id')
                         ->widget(Select2::class, [
-                            'data' => ArrayHelper::map(Author::find()->all(), 'id', 'name'),
+                            'data' => ArrayHelper::map(Authors::find()->all(), 'id', 'name'),
                             'options' => ['placeholder' => 'Выберите автора'],
                         ]) ?>
                 </div>
