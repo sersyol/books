@@ -13,7 +13,7 @@ use Yii;
  *
  * @property Authors $author
  */
-class Book extends \yii\db\ActiveRecord
+class Books extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}

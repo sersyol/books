@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Book;
+use app\models\Books;
 
 /**
- * BookSearch represents the model behind the search form of `app\models\Book`.
+ * BookSearch represents the model behind the search form of `app\models\Books`.
  */
-class BookSearch extends Book
+class BookSearch extends Books
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class BookSearch extends Book
      */
     public function search($params)
     {
-        $query = Book::find();
+        $query = Books::find();
 
         // add conditions that should always apply here
 

@@ -6,12 +6,12 @@ namespace app\controllers;
 use yii\rest\ActiveController;
 use yii\web\Response;
 use yii\web\NotFoundHttpException;
-use app\models\Book;
+use app\models\Books;
 use Yii;
 
 class ApiController extends ActiveController
 {
-    public $modelClass = 'app\models\Book';
+    public $modelClass = 'app\models\Books';
 
     public function behaviors()
     {
@@ -22,13 +22,13 @@ class ApiController extends ActiveController
 
     public function actionList()
     {
-        $books = Book::find()->with('author')->all();
+        $books = Books::find()->with('author')->all();
         return $books;
     }
 
     public function actionById($id)
     {
-        $book = Book::findOne($id);
+        $book = Books::findOne($id);
         if ($book === null) {
             throw new NotFoundHttpException("Book not found");
         }
@@ -38,7 +38,7 @@ class ApiController extends ActiveController
     public function actionUpdate()
     {
         $params = Yii::$app->request->post();
-        $book = Book::findOne($params['id']);
+        $book = Books::findOne($params['id']);
         if ($book === null) {
             throw new NotFoundHttpException("Book not found");
         }
@@ -51,7 +51,7 @@ class ApiController extends ActiveController
 
     public function actionDelete($id)
     {
-        $book = Book::findOne($id);
+        $book = Books::findOne($id);
         if ($book === null) {
             throw new NotFoundHttpException("Book not found");
         }

@@ -9,8 +9,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Author;
-use app\models\Book;
+use app\models\Authors;
+use app\models\Books;
 
 
 class SiteController extends Controller
@@ -131,13 +131,13 @@ class SiteController extends Controller
 
     public function actionAuthors()
     {
-        $authors = Author::find()->all();
+        $authors = Authors::find()->all();
         return $this->render('authors', ['authors' => $authors]);
     }
 
     public function actionBooks()
     {
-        $books = Book::find()->all();
+        $books = Books::find()->all();
         return $this->render('books', ['books' => $books]);
     }
 }

@@ -4,7 +4,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $books app\models\Book[] */
+/* @var $books app\models\Books[] */
 
 $this->title = 'Books';
 $this->params['breadcrumbs'][] = $this->title;
