@@ -4,35 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e5979bb623cbcce8a041df2cd93a56d",
+    "content-hash": "e8c916a79f4687491ce61db36cf56292",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
-            "version": "v5.3.3",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+                "url": "git@github.com:twbs/bootstrap.git",
+                "reference": "cb021439c683d9805e2864c58095b92d405e9b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
-                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cb021439c683d9805e2864c58095b92d405e9b11",
+                "reference": "cb021439c683d9805e2864c58095b92d405e9b11"
             },
             "type": "bower-asset"
         },
         {
             "name": "bower-asset/inputmask",
-            "version": "5.0.9",
+            "version": "5.0.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "310a33557e2944daf86d5946a5e8c82b9118f8f7"
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/310a33557e2944daf86d5946a5e8c82b9118f8f7",
-                "reference": "310a33557e2944daf86d5946a5e8c82b9118f8f7"
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/e0f39e0c93569c6b494c3a57edef2c59313a6b64",
+                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -533,6 +533,137 @@
                 }
             ],
             "time": "2023-06-22T07:43:31+00:00"
+        },
+        {
+            "name": "p2made/p2y2-base",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/p2made/p2y2-base.git",
+                "reference": "18ec66b9abc46ed1abf36ebf037750f36cd02c39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/p2made/p2y2-base/zipball/18ec66b9abc46ed1abf36ebf037750f36cd02c39",
+                "reference": "18ec66b9abc46ed1abf36ebf037750f36cd02c39",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.43",
+                "yiisoft/yii2-bootstrap5": "~2.0.1"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "p2m\\base\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Plowman",
+                    "email": "p2opensource@gmail.com",
+                    "homepage": "https://github.com/p2made"
+                }
+            ],
+            "description": "A base bundle for other p2y2 bundles.",
+            "keywords": [
+                "asset",
+                "bundle",
+                "extension",
+                "php",
+                "yii",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/p2made/p2y2-base/issues?state=open",
+                "source": "https://github.com/p2made/p2y2-base"
+            },
+            "time": "2021-09-11T00:35:59+00:00"
+        },
+        {
+            "name": "p2made/p2y2-things",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/p2made/p2y2-things.git",
+                "reference": "a7a27a71b9d4d590682c4ff44401e3f81d4b77ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/p2made/p2y2-things/zipball/a7a27a71b9d4d590682c4ff44401e3f81d4b77ff",
+                "reference": "a7a27a71b9d4d590682c4ff44401e3f81d4b77ff",
+                "shasum": ""
+            },
+            "require": {
+                "p2made/p2y2-base": "^5.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "p2m\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Plowman",
+                    "email": "p2opensource@gmail.com",
+                    "homepage": "https://github.com/p2made"
+                }
+            ],
+            "description": "A bunch of CSS & JS resources wrapped as Yii 2 AssetBundles &/or Widgets.",
+            "keywords": [
+                "Bootstrap Social",
+                "Holder.js",
+                "Morris.js",
+                "Respond.JS",
+                "alerts",
+                "asset",
+                "bundle",
+                "calendar",
+                "charts",
+                "data",
+                "datatables",
+                "ector",
+                "ector graphics",
+                "excanvas",
+                "extension",
+                "flot",
+                "fullcalendar",
+                "graphics",
+                "html5shiv",
+                "menu",
+                "metisMenu",
+                "moment",
+                "moment-timezone",
+                "moment.js",
+                "morris",
+                "php",
+                "placeholder",
+                "placeholder-image",
+                "raphael",
+                "social",
+                "sweetalert",
+                "tables",
+                "time",
+                "timezone",
+                "widget",
+                "yii",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/p2made/p2y2-things/issues?state=open",
+                "source": "https://github.com/p2made/p2y2-things"
+            },
+            "time": "2021-09-12T04:20:42+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5714,7 +5845,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "p2made/p2y2-things": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
